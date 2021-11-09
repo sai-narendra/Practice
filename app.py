@@ -62,7 +62,7 @@ def predict():
     stream = StringIO(f.stream.read().decode('UTF-8'))
     result = stream.read()
  
-    df = pd.read_csv(StringIO(result))
+    df = pd.read_csv(StringIO(result),header=None)
 
     df = test_feature_engineering(df)
 
